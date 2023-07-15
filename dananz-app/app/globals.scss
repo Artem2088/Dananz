@@ -1,0 +1,19 @@
+@use "utils/variables";
+
+body {
+    width: 100%;
+    background: variables.$COLOR_MAIN;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
+    min-width: 320px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 0 10px;
+}
+

@@ -1,0 +1,107 @@
+@use "utils/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+
+  @media screen and (max-width: 985px) {
+    justify-content: space-around;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 31px 0;
+  }
+
+  &__logo-wrap {
+    width: 101px;
+    height: 30px;
+  }
+
+  &__logo-img {
+    box-sizing: border-box;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    margin: 0 214px 0 241px;
+
+    @media screen and (max-width: 1220px) {
+      margin: 0 100px 0 100px;
+    }
+
+    @media screen and (max-width: 985px) {
+      display: none;
+    }
+  }
+
+  &__li {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: variables.$COLOR_WHITE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__arrow-down {
+    padding-left: 4px;
+  }
+
+  &__button {
+    display: inline-flex;
+    padding: 12px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-image: variables.$GRADIENT_COLOR-BORDER;
+    border-image-slice: 1;
+
+    @media screen and (max-width: 985px) {
+      display: none;
+    }
+  }
+
+  &__button-span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    color: variables.$COLOR_WHITE;
+  }
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-shrink: 0;
+    opacity: 0.2;
+  }
+
+  &__burger-menu {
+    display: none;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 985px) {
+      display: flex;
+    }
+  }
+
+  &__burger-img {
+    color: variables.$COLOR_WHITE;
+  }
+}
